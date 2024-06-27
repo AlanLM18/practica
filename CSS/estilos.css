@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.contenedor {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#tabla {
+    width: 80%;
+}
+
+.fila {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border: 2px solid darkcyan;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.celda {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.descripcion {
+    flex-basis: 100%;
+}
+.fila:nth-child(odd) {
+    background-color: cadetblue;
+}
+@media screen and (min-width: 1146px) {
+    .fila {
+        display: table-row;
+        margin-bottom: 0;
+    }
+
+    .celda {
+        display: table-cell;
+        border: 1px solid darkcyan;
+    }
+
+    .descripcion {
+        display: table-cell;
+    }
+}
